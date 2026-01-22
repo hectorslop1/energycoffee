@@ -4,7 +4,6 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/l10n/app_localizations.dart';
 import '../../order/pages/order_history/order_history_page.dart';
 import '../../notifications/pages/notifications_page.dart';
-import '../../auth/pages/login/login_page.dart';
 import '../../auth/providers/auth_provider.dart';
 import '../widgets/settings_modal.dart';
 

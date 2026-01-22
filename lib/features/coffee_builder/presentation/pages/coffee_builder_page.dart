@@ -7,7 +7,7 @@ import '../../../../core/l10n/app_localizations.dart';
 import '../../domain/enums/coffee_type.dart';
 import '../../domain/enums/product_category.dart';
 import '../../state/coffee_builder_state.dart';
-import '../widgets/coffee_preview/animated_coffee_preview.dart';
+import '../widgets/coffee_preview/coffee_visual_widget.dart';
 import '../widgets/coffee_preview/product_image_preview.dart';
 import '../widgets/selectors/coffee_type_selector.dart';
 import '../widgets/selectors/size_selector.dart';
@@ -19,6 +19,7 @@ import '../widgets/selectors/bread_type_selector.dart';
 import '../widgets/selectors/vegetables_selector.dart';
 import '../widgets/selectors/heating_option_selector.dart';
 import '../widgets/selectors/quantity_selector.dart';
+import '../widgets/selection_summary_panel.dart';
 
 class CoffeeBuilderPage extends StatefulWidget {
   final CoffeeType? initialCoffeeType;
@@ -154,9 +155,11 @@ class _CoffeeBuilderPageState extends State<CoffeeBuilderPage> {
                   heroTag: widget.heroTag ?? 'coffee_hero',
                 );
               }
-              return const AnimatedCoffeePreview();
+              return const CoffeeVisualWidget();
             },
           ),
+          const SizedBox(height: 8),
+          SelectionSummaryPanel(onStepTap: _goToStep),
           const SizedBox(height: 4),
           Consumer<CoffeeBuilderState>(
             builder: (context, state, child) {

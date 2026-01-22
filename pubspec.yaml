@@ -60,6 +60,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   
+  shaders:
+    - shaders/coffee_steam.frag
+  
   assets:
     # Logo and Launcher
     - assets/images/LogoCoffee.png
@@ -88,6 +91,12 @@ flutter:
     - assets/images/branding/
     - assets/images/illustrations/
     - assets/images/CoffeeExamples/
+    
+    # Coffee Builder Layers
+    - assets/images/Coffee_layers/Base_coffee/
+    - assets/images/Coffee_layers/Coffee_withmilk/
+    - assets/images/Coffee_layers/Coffee_whippedcream/
+    - assets/images/Coffee_layers/Coffee_caramel/
     
     # Animations
     - assets/animations/

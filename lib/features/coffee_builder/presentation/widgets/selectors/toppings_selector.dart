@@ -12,6 +12,7 @@ class ToppingsSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = context.watch<CoffeeBuilderState>();
     final selectedToppings = state.currentCoffee.toppings;
+    final hasNoToppings = selectedToppings.isEmpty;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,7 +26,7 @@ class ToppingsSelector extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         Text(
-          AppLocalizations.of(context).selectAll,
+          'Select one option',
           style: TextStyle(
             fontSize: 12,
             color: Colors.grey.shade600,
@@ -39,10 +40,25 @@ class ToppingsSelector extends StatelessWidget {
             physics: const BouncingScrollPhysics(
               parent: AlwaysScrollableScrollPhysics(),
             ),
-            itemCount: ToppingType.values.length,
+            itemCount: ToppingType.values.length + 1,
             separatorBuilder: (context, index) => const SizedBox(width: 8),
             itemBuilder: (context, index) {
-              final topping = ToppingType.values[index];
+              if (index == 0) {
+                return _NoneChip(
+                  isSelected: hasNoToppings,
+                  onTap: () {
+                    for (var topping in ToppingType.values) {
+                      if (selectedToppings.contains(topping)) {
+                        context
+                            .read<CoffeeBuilderState>()
+                            .toggleTopping(topping);
+                      }
+                    }
+                  },
+                );
+              }
+
+              final topping = ToppingType.values[index - 1];
               final isSelected = selectedToppings.contains(topping);
               return _ToppingChip(
                 toppingType: topping,
@@ -54,6 +70,78 @@ class ToppingsSelector extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _NoneChip extends StatelessWidget {
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  const _NoneChip({
+    required this.isSelected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? AppColors.primary
+              : (Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.darkBackgroundCard
+                  : Colors.white),
+          borderRadius: BorderRadius.circular(25),
+          border: Border.all(
+            color: isSelected
+                ? AppColors.primary
+                : (Theme.of(context).brightness == Brightness.dark
+                    ? Colors.grey.shade700
+                    : Colors.grey.shade300),
+            width: 2,
+          ),
+          boxShadow: isSelected
+              ? [
+                  BoxShadow(
+                    color: AppColors.primary.withOpacity(0.3),
+                    blurRadius: 8,
+                    offset: const Offset(0, 4),
+                  ),
+                ]
+              : [],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (isSelected)
+              const Padding(
+                padding: EdgeInsets.only(right: 5),
+                child: Icon(
+                  Icons.check_circle,
+                  size: 14,
+                  color: Colors.white,
+                ),
+              ),
+            Text(
+              'None',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: isSelected
+                    ? Colors.white
+                    : (Theme.of(context).brightness == Brightness.dark
+                        ? AppColors.darkTextPrimary
+                        : Colors.black87),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

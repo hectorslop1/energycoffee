@@ -114,6 +114,11 @@ class CoffeeBuilderState extends ChangeNotifier {
     if (currentToppings.contains(topping)) {
       currentToppings.remove(topping);
     } else {
+      if (topping == ToppingType.whippedCream ||
+          topping == ToppingType.caramelDrizzle) {
+        currentToppings.removeWhere((t) =>
+            t == ToppingType.whippedCream || t == ToppingType.caramelDrizzle);
+      }
       currentToppings.add(topping);
     }
 
