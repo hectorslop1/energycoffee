@@ -41,9 +41,9 @@ class NotificationsPage extends StatelessWidget {
               onPressed: () {
                 // Mark all as read
               },
-              child: Text(
+              child: const Text(
                 'Mark all',
-                style: const TextStyle(color: AppColors.primary),
+                style: TextStyle(color: AppColors.primary),
               ),
             ),
         ],

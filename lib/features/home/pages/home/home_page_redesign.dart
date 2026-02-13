@@ -331,7 +331,7 @@ class _HomePageRedesignState extends State<HomePageRedesign>
                           : AppColors.lightBackgroundSecondary,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.person_rounded,
                       size: 24,
                       color: AppColors.primary,
@@ -722,7 +722,7 @@ class _HomePageRedesignState extends State<HomePageRedesign>
   Widget _buildRewardProgressCard(BuildContext context, bool isDark) {
     const int currentCoffees = 6;
     const int totalCoffees = 8;
-    final double progress = currentCoffees / totalCoffees;
+    const double progress = currentCoffees / totalCoffees;
 
     return Container(
       decoration: BoxDecoration(
@@ -844,9 +844,9 @@ class _HomePageRedesignState extends State<HomePageRedesign>
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text(
+                          const Text(
                             '$currentCoffees',
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w800,
                               color: AppColors.primary,
@@ -960,17 +960,17 @@ class _HomePageRedesignState extends State<HomePageRedesign>
                             color: AppColors.getTextSecondary(context),
                             fontWeight: FontWeight.w500,
                           ),
-                          children: [
-                            const TextSpan(text: 'Only '),
+                          children: const [
+                            TextSpan(text: 'Only '),
                             TextSpan(
                               text:
                                   '${totalCoffees - currentCoffees} more coffees',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 color: AppColors.primary,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            const TextSpan(text: ' for your reward'),
+                            TextSpan(text: ' for your reward'),
                           ],
                         ),
                       ),

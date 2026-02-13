@@ -102,7 +102,7 @@ class _ScanSuccessParticlesState extends State<ScanSuccessParticles>
       return Tween<double>(begin: 1.0, end: 0.0).animate(
         CurvedAnimation(
           parent: _controller,
-          curve: Interval(0.0, 0.8, curve: Curves.easeOut),
+          curve: const Interval(0.0, 0.8, curve: Curves.easeOut),
         ),
       );
     });

@@ -239,7 +239,7 @@ class _AssignTablePageState extends State<AssignTablePage> {
             padding: const EdgeInsets.all(24),
             child: Column(
               children: [
-                Icon(
+                const Icon(
                   Icons.table_restaurant,
                   size: 64,
                   color: AppColors.primary,
@@ -276,7 +276,7 @@ class _AssignTablePageState extends State<AssignTablePage> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: AppColors.primary,
                         width: 2,
                       ),
@@ -299,7 +299,7 @@ class _AssignTablePageState extends State<AssignTablePage> {
                     ),
                     child: Text(
                       AppLocalizations.of(context).confirmTable,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -321,7 +321,7 @@ class _AssignTablePageState extends State<AssignTablePage> {
             ),
             child: Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.info_outline,
                   color: AppColors.primary,
                   size: 20,

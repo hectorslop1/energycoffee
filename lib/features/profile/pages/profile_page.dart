@@ -128,7 +128,7 @@ class _ProfilePageState extends State<ProfilePage>
                       : AppColors.lightBackgroundSecondary,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.person_rounded,
                   size: 40,
                   color: AppColors.primary,

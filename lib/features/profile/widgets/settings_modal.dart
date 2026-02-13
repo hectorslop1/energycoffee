@@ -147,7 +147,7 @@ class _SettingsModalState extends State<SettingsModal> {
                               }
                             }
                           : null,
-                      activeColor: AppColors.primary,
+                      activeThumbColor: AppColors.primary,
                     ),
                   ),
                   const SizedBox(height: 24),

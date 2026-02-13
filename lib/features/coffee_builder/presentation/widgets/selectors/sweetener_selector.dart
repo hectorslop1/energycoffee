@@ -52,9 +52,9 @@ class SweetenerSelector extends StatelessWidget {
         ),
         if (selectedSweetener != SweetenerType.none) ...[
           const SizedBox(height: 16),
-          Text(
+          const Text(
             'Sweetness level',
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w600,
             ),

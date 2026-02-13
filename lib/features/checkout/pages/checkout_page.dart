@@ -173,11 +173,11 @@ class _CheckoutPageState extends State<CheckoutPage> {
           return Column(
             children: [
               // Progress Bar
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(16, 16, 16, 24),
                 child: CheckoutProgressBar(
                   currentStep: 1,
-                  steps: const ['Carrito', 'Pago', 'Confirmar'],
+                  steps: ['Carrito', 'Pago', 'Confirmar'],
                 ),
               ),
               Expanded(
@@ -235,7 +235,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         children: [
           Row(
             children: [
-              Icon(Icons.receipt_long_rounded,
+              const Icon(Icons.receipt_long_rounded,
                   color: AppColors.primary, size: 22),
               const SizedBox(width: 12),
               Text(
@@ -429,7 +429,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         children: [
           Row(
             children: [
-              Icon(Icons.volunteer_activism_rounded,
+              const Icon(Icons.volunteer_activism_rounded,
                   color: AppColors.primary, size: 22),
               const SizedBox(width: 12),
               Text(
@@ -631,7 +631,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         children: [
           Row(
             children: [
-              Icon(Icons.payment_rounded, color: AppColors.primary, size: 22),
+              const Icon(Icons.payment_rounded, color: AppColors.primary, size: 22),
               const SizedBox(width: 12),
               Text(
                 'Método de Pago',

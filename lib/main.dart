@@ -84,7 +84,7 @@ class EnergyCoffeeApp extends StatelessWidget {
 
 /// Navegador principal que maneja el flujo de pantallas
 class _AppNavigator extends StatefulWidget {
-  _AppNavigator();
+  const _AppNavigator();
 
   @override
   State<_AppNavigator> createState() => _AppNavigatorState();

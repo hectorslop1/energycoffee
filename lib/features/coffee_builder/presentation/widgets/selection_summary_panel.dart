@@ -255,8 +255,8 @@ class SelectionSummaryPanel extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 if (isCompleted && !isActive)
-                  Padding(
-                    padding: const EdgeInsets.only(right: 3),
+                  const Padding(
+                    padding: EdgeInsets.only(right: 3),
                     child: Icon(
                       Icons.check_circle,
                       size: 12,

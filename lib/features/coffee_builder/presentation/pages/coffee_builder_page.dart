@@ -448,7 +448,7 @@ class _NavigationButtons extends StatelessWidget {
                   ),
                   Text(
                     '\$${state.totalPrice.toStringAsFixed(2)}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: AppColors.primary,
@@ -465,7 +465,7 @@ class _NavigationButtons extends StatelessWidget {
                       horizontal: 16,
                       vertical: 10,
                     ),
-                    side: BorderSide(
+                    side: const BorderSide(
                       color: AppColors.primary,
                       width: 2,
                     ),

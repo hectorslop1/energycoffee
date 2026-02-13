@@ -124,7 +124,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
               curve: Curves.easeInOut,
               width: isSelected ? 5 : 0,
               height: isSelected ? 5 : 0,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: AppColors.primary,
                 shape: BoxShape.circle,
               ),
