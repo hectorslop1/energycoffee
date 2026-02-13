@@ -206,6 +206,16 @@ abstract class AppLocalizations {
   String get customerName;
   String get phoneNumber;
   String get paymentInfo;
+
+  // Table Assignment
+  String get scanQRCode;
+  String get enterTableNumber;
+  String get confirmTable;
+  String get pointCameraAtQR;
+  String get tableNumberHint;
+  String get invalidTableNumber;
+  String get errorScanningQR;
+  String get errorAssigningTable;
   String get cardNumber;
   String get expiryDate;
   String get cvv;

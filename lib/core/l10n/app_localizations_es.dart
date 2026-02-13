@@ -478,6 +478,32 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get paymentInfo => 'Información de Pago';
 
+  // Table Assignment
+  @override
+  String get scanQRCode => 'Escanea el código QR de tu mesa';
+
+  @override
+  String get enterTableNumber => 'Ingresa el número de mesa';
+
+  @override
+  String get confirmTable => 'Confirmar Mesa';
+
+  @override
+  String get pointCameraAtQR => 'Apunta la cámara al código QR';
+
+  @override
+  String get tableNumberHint =>
+      'Puedes encontrar el número de mesa en la etiqueta de tu mesa';
+
+  @override
+  String get invalidTableNumber => 'Por favor ingresa un número de mesa válido';
+
+  @override
+  String get errorScanningQR => 'Error al escanear el código QR';
+
+  @override
+  String get errorAssigningTable => 'Error al asignar la mesa';
+
   @override
   String get cardNumber => 'Número de Tarjeta';
 

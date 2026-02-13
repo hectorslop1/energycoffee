@@ -16,6 +16,7 @@ import 'features/auth/providers/auth_provider.dart';
 import 'features/auth/pages/splash/splash_page.dart';
 import 'features/auth/pages/login/login_page.dart';
 import 'features/coffee_builder/state/coffee_builder_state.dart';
+import 'features/table/providers/table_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,6 +43,7 @@ class EnergyCoffeeApp extends StatelessWidget {
         provider.ChangeNotifierProvider(create: (_) => AuthProvider()),
         provider.ChangeNotifierProvider(create: (_) => BiometricProvider()),
         provider.ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        provider.ChangeNotifierProvider(create: (_) => TableProvider()),
       ],
       child: provider.Consumer2<ThemeProvider, LocaleProvider>(
         builder: (context, themeProvider, localeProvider, child) {

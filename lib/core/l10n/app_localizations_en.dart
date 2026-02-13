@@ -476,6 +476,32 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get paymentInfo => 'Payment Info';
 
+  // Table Assignment
+  @override
+  String get scanQRCode => 'Scan your table\'s QR code';
+
+  @override
+  String get enterTableNumber => 'Enter table number';
+
+  @override
+  String get confirmTable => 'Confirm Table';
+
+  @override
+  String get pointCameraAtQR => 'Point the camera at the QR code';
+
+  @override
+  String get tableNumberHint =>
+      'You can find the table number on your table\'s label';
+
+  @override
+  String get invalidTableNumber => 'Please enter a valid table number';
+
+  @override
+  String get errorScanningQR => 'Error scanning QR code';
+
+  @override
+  String get errorAssigningTable => 'Error assigning table';
+
   @override
   String get cardNumber => 'Card Number';
 
